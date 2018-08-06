@@ -42,8 +42,8 @@ describe('Flash Deals', function () {
     it('should return a list of items', function () {
         return AliExpress.FlashDeals.get().then(function (data) {
             data.should.be.an.instanceOf(Object);
-            data.gpsProductDetails.should.be.an.instanceOf(Array);
-            good = data.gpsProductDetails[0] || null;
+            data.products.should.be.an.instanceOf(Array);
+            good = data.products[0] || null;
             good.should.be.an.instanceOf(Object);
             good.productDetailUrl.should.be.an.String();
         });

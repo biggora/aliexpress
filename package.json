@@ -26,6 +26,7 @@
   "dependencies": {
     "bluebird": "^3.4.7",
     "cheerio": "^0.22.0",
+    "deep-assign": "^2.0.0",
     "phantom": "^3.2.1",
     "request": "^2.87.0"
   }
