@@ -15,6 +15,18 @@ describe('Spider', function () {
     });
 });
 
+describe('Categories', function () {
+    it('should return a list of items', function () {
+        return AliExpress.Categories.get().then(function (data) {
+            data.should.be.an.instanceOf(Object);
+            data.optionItemList.should.be.an.instanceOf(Array);
+            const category = data.optionItemList[0] || null;
+            category.should.be.an.instanceOf(Object);
+            category.name.should.be.an.String();
+        });
+    });
+});
+
 // describe('Best Selling', function () {
 //     it('should return a list of items', function () {
 //         return AliExpress.BestSelling.get().then(function (data) {
@@ -52,10 +64,24 @@ describe('Recommendations', function () {
 
 describe('Detail', function () {
     it('showuld return Good Detail', function () {
-        return AliExpress.Detail(good.productDetailUrl).then(function (d) {
-            d.should.be.an.instanceOf(Object);
-            d.productId.should.be.an.String();
-            d.orderCount.should.be.an.Number();
+        return AliExpress.Detail(good.productDetailUrl).then(function (data) {
+            data.should.be.an.instanceOf(Object);
+            data.productId.should.be.an.String();
+            data.orderCount.should.be.an.Number();
         });
     });
 });
+
+describe('Freight Countries', function () {
+    it('should return Countries list', function () {
+        return AliExpress.FreightCountries.get().then(function (data) {
+            data.should.be.an.instanceOf(Object);
+            data.countries.should.be.an.instanceOf(Array);
+            const country = data.countries[0] || null;
+            country.should.be.an.instanceOf(Object);
+            country.c.should.be.an.String();
+        });
+    });
+});
+
+// https://freight.aliexpress.com/ajaxFreightCalculateService.htm?f=d&productid=32858080658&count=1&minPrice=1.08&maxPrice=1.81&currencyCode=USD&transactionCurrencyCode=USD&sendGoodsCountry=&country=LV&province=&city=&abVersion=1
