@@ -36,15 +36,18 @@ AliExpressSpider.FlashDeals.get().then(function(goods){
 Result sample:
 
 ```javascript
-[
-  {
-    productDetailUrl: 'https://www.aliexpress.com/item/2015-Original-Micro-USB-Cable-with-Colorful-Nylon-Line-Metal-plug-for-iPhone-6-Plus-5s/32470659404.html?scm=1007.13442.37932.0&pvid=6092a253-929e-42ba-b75b-64fba51eed52&tpp=1',
-    productTitle: 'Bastec USB Data Charger Cable Nylon Braided Wire Met...',
-    minPrice: 15.51,
-    maxPrice: 15.51,
-    currency: 'USD'
-  }
-]
+{
+  url: 'https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20170201171227&SearchText=iPad$page=2',
+  products: [
+    {
+      productDetailUrl: 'https://www.aliexpress.com/item/2015-Original-Micro-USB-Cable-with-Colorful-Nylon-Line-Metal-plug-for-iPhone-6-Plus-5s/32470659404.html?scm=1007.13442.37932.0&pvid=6092a253-929e-42ba-b75b-64fba51eed52&tpp=1',
+      productTitle: 'Bastec USB Data Charger Cable Nylon Braided Wire Met...',
+      minPrice: 15.51,
+      maxPrice: 15.51,
+      currency: 'USD'
+    }
+  ]
+}
 ```
 
 ### Get Good Detail
@@ -72,7 +75,7 @@ Result sample:
        src: 'http://g04.a.alicdn.com/kf/HTB19ttPLVXXXXa_XFXXq6xXFXXXa/Bastec-USB-Data-Charger-Cable-Nylon-Braided-Wire-Metal-Plug-Micro-USB-Cable-for-iPhone-6.jpg_50x50.jpg' },
       ...
     ],
-  property:
+  params:
    [ { title: 'Brand Name:', des: 'bastec' },
      { title: 'Compatible Brand:',
        des: 'SONY,LG,Toshiba,Apple iPhones,Samsung,Panasonic,HTC' }
