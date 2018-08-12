@@ -1,7 +1,7 @@
 {
   "name": "aliexpress",
   "version": "0.3.0",
-  "description": "A aliexpress spider",
+  "description": "An aliexpress spider",
   "main": "index.js",
   "scripts": {
     "test": "mocha --no-timeouts test/run.js"

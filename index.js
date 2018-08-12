@@ -1,4 +1,5 @@
 module.exports = {
+    Spider: require('./lib/Spider'),
     Categories: require('./lib/Categories'),
     BestSelling: require('./lib/BestSelling'),
     FlashDeals: require('./lib/FlashDeals'),
@@ -6,5 +7,6 @@ module.exports = {
     Search: require('./lib/Search'),
     Detail: require('./lib/Detail'),
     FreightCountries: require('./lib/FreightCountries'),
-    FreightCalculate: require('./lib/FreightCalculate')
+    FreightCalculate: require('./lib/FreightCalculate'),
+    DefaultConfig: require('./lib/common/config')
 };
