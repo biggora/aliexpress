@@ -28,6 +28,7 @@
     "cheerio": "^0.22.0",
     "deep-assign": "^2.0.0",
     "phantom": "^3.2.1",
-    "request": "^2.87.0"
+    "request": "^2.87.0",
+    "uuid": "3.3.2"
   }
 }
